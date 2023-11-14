@@ -1,0 +1,344 @@
+@use "colors" as c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Jost", sans-serif;
+  background-color: rgb(69, 69, 69);
+}
+nav {
+  z-index: 7;
+  .nav-link {
+    text-transform: uppercase;
+  }
+}
+.navbar-toggler {
+  padding: 10px;
+}
+.navbar-brand {
+  text-shadow: 0 0 20px black;
+}
+.welcome {
+  background-image: url("/sass/assets/spacejoy-GNs831kqdoM-unsplash.jpg");
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .welcome-text {
+    color: c.$white;
+    text-shadow: 0 0 5px black;
+  }
+  h1 {
+    color: c.$white;
+    text-shadow: 0 0 5px black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .welcome-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+  }
+  a.btn.btn-secondary {
+    z-index: 6;
+    position: absolute;
+  }
+  .fa-solid.fa-chevron-down {
+    z-index: 6;
+    position: absolute;
+  }
+}
+.blue-text {
+  color: c.$blue;
+}
+.shadow-bg {
+  background-color: rgba(50, 50, 72, 0.719);
+}
+
+/* o nas sekcja*/
+
+#aboutus {
+  .container {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .aboutus-hover:hover {
+    color: c.$blue;
+  }
+  h2,
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-top: 30px;
+  }
+  .underline {
+    width: 100px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: c.$blue;
+    margin-bottom: 20px;
+  }
+}
+main {
+  .container {
+    margin: 20px auto;
+    text-align: center;
+
+    h4,
+    h5 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    h4 {
+      color: white;
+      padding-top: 30px;
+    }
+    h5 {
+      color: black;
+      padding: 5px;
+    }
+    .underline {
+      width: 100px;
+      height: 3px;
+      margin: 0 auto;
+      background-color: c.$blue;
+      margin-bottom: 20px;
+    }
+
+    .carousel-item img {
+      height: 90vh;
+    }
+    .carousel-caption {
+      color: black;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.66);
+      width: 100%;
+      left: 0;
+      right: 0;
+      padding: 10px;
+    }
+    .card {
+      margin: 20px;
+      width: 80vw;
+    }
+  }
+}
+#prices {
+  height: 60vh;
+  width: 100%;
+
+  .container {
+    margin: 20px auto;
+    padding: 0 12px;
+
+    .prices-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+}
+#contact {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  .container {
+    margin-top: 0;
+    margin-bottom: 0;
+  
+  }
+  h6,
+  p {
+    color: lightgray;
+  }
+  z-index: 0;
+  background-attachment: fixed;
+  background-position: bottom;
+.contact-socialmedia>i:hover
+{
+cursor: pointer;
+color: c.$blue;
+}
+  .contact-shadow {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0.4;
+    z-index: -1;
+    background-image: url("/sass/assets/mediocre-studio-WAWxsS9DeK4-unsplash.jpg");
+  }
+}
+
+
+/*media queries*/
+
+@media (max-width: 575.98px) {
+  #prices {
+    height: 90vh;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  h5 {
+    font-size: 16px;
+  }
+
+  .card-group {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card,
+    img {
+      padding: 10px;
+    }
+    .card:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome-text {
+    h1 {
+      font-size: 55px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+/*animacje*/
+.bounce-top
+{
+  -webkit-animation: bounce-top 3s 1s infinite alternate both;
+  animation: bounce-top 3s 1s infinite alternate both;
+}
+
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}

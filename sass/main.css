@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: rgb(69, 69, 69);
+}
+
+nav {
+  z-index: 7;
+}
+nav .nav-link {
+  text-transform: uppercase;
+}
+
+.navbar-toggler {
+  padding: 10px;
+}
+
+.navbar-brand {
+  text-shadow: 0 0 20px black;
+}
+
+.welcome {
+  background-image: url("/sass/assets/spacejoy-GNs831kqdoM-unsplash.jpg");
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome .welcome-text {
+  color: #ffffff;
+  text-shadow: 0 0 5px black;
+}
+.welcome h1 {
+  color: #ffffff;
+  text-shadow: 0 0 5px black;
+  text-transform: uppercase;
+  text-align: center;
+}
+.welcome .welcome-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  display: flex;
+}
+.welcome a.btn.btn-secondary {
+  z-index: 6;
+  position: absolute;
+}
+.welcome .fa-solid.fa-chevron-down {
+  z-index: 6;
+  position: absolute;
+}
+
+.blue-text {
+  color: #619df6;
+}
+
+.shadow-bg {
+  background-color: rgba(50, 50, 72, 0.719);
+}
+
+/* o nas sekcja*/
+#aboutus .container {
+  margin: 20px auto;
+  text-align: center;
+}
+#aboutus .aboutus-hover:hover {
+  color: #619df6;
+}
+#aboutus h2,
+#aboutus h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+#aboutus .underline {
+  width: 100px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #619df6;
+  margin-bottom: 20px;
+}
+
+main .container {
+  margin: 20px auto;
+  text-align: center;
+}
+main .container h4,
+main .container h5 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+main .container h4 {
+  color: white;
+  padding-top: 30px;
+}
+main .container h5 {
+  color: black;
+  padding: 5px;
+}
+main .container .underline {
+  width: 100px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #619df6;
+  margin-bottom: 20px;
+}
+main .container .carousel-item img {
+  height: 90vh;
+}
+main .container .carousel-caption {
+  color: black;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.66);
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+main .container .card {
+  margin: 20px;
+  width: 80vw;
+}
+
+#prices {
+  height: 60vh;
+  width: 100%;
+}
+#prices .container {
+  margin: 20px auto;
+  padding: 0 12px;
+}
+#prices .container .prices-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#contact {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+#contact .container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#contact h6,
+#contact p {
+  color: lightgray;
+}
+#contact .contact-socialmedia > i:hover {
+  cursor: pointer;
+  color: #619df6;
+}
+#contact .contact-shadow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0.4;
+  z-index: -1;
+  background-image: url("/sass/assets/mediocre-studio-WAWxsS9DeK4-unsplash.jpg");
+}
+
+/*media queries*/
+@media (max-width: 575.98px) {
+  #prices {
+    height: 90vh;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  h5 {
+    font-size: 16px;
+  }
+  .card-group {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-group .card,
+  .card-group img {
+    padding: 10px;
+  }
+  .card-group .card:first-of-type {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .welcome-text h1 {
+    font-size: 55px;
+  }
+  .welcome-text p {
+    font-size: 22px;
+  }
+}
+/*animacje*/
+.bounce-top {
+  animation: bounce-top 3s 1s infinite alternate both;
+}
+@keyframes bounce-top {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */
